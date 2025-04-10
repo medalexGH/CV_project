@@ -3,7 +3,7 @@ from openai import OpenAI
 from parse_hh import get_html, extract_vacancy_data, extract_resume_data
 
 # Инициализация OpenAI-клиента
-client = OpenAI(api_key="OPENAI_API_KEY") 
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 SYSTEM_PROMPT = """
 Проскорь кандидата, насколько он подходит для данной вакансии.
