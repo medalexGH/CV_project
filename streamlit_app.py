@@ -34,8 +34,8 @@ cv = st.text_area('Введите ссылку на резюме')
 if st.button("Проанализировать соответствие"):
     with st.spinner("Парсим данные и отправляем в GPT..."):
         try:
-            job_html = get_html(job_url).text
-            resume_html = get_html(resume_url).text
+            job_html = get_html(job_description).text
+            resume_html = get_html(cv).text
 
             job_text = extract_vacancy_data(job_html)
             resume_text = extract_resume_data(resume_html)
